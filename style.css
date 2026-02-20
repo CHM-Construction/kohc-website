@@ -82,7 +82,6 @@ nav a:hover {
    HERO SECTION
    ========================================= */
 .hero {
-    /* Using a placeholder industrial background image */
     background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.85)), url('https://images.unsplash.com/photo-1579165466541-74e2beeac70b?auto=format&fit=crop&q=80&w=2070'); 
     background-size: cover;
     background-position: center;
@@ -292,35 +291,71 @@ footer {
 }
 
 /* =========================================
-   MOBILE RESPONSIVENESS
+   MOBILE RESPONSIVENESS (COMPLETELY OVERHAULED)
    ========================================= */
 @media (max-width: 768px) {
+    /* Make navigation stack and fit nicely */
     nav { 
         flex-direction: column; 
-        gap: 15px; 
+        gap: 10px; 
         padding: 15px 5%;
     }
     
     nav ul {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 15px;
+        gap: 12px;
     }
 
+    /* Shrink the giant hero banner texts for phone screens */
     .hero {
-        padding: 100px 5%;
+        padding: 80px 5%;
     }
 
     .hero h1 { 
-        font-size: 2rem; 
+        font-size: 1.8rem; 
+    }
+
+    .hero p {
+        font-size: 1rem;
     }
     
+    /* Make buttons span the whole width of the screen so they are easy to tap */
     .cta-group {
         flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
     }
     
+    /* Stack the trust icons neatly */
     .trust-bar {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        gap: 15px;
+    }
+
+    /* Bring in the massive padding off the edges so content has room */
+    .section-padding { 
+        padding: 50px 5%; 
+    }
+
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+
+    /* THE MAGIC RULE: This forces EVERY grid to become a 1-column stack on phones */
+    .grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    /* Give cards a little less padding on phones so text isn't squished */
+    .card {
+        padding: 25px;
     }
 }
