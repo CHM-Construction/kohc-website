@@ -3,43 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KOHC provides tailored corporate occupational health solutions, annual service agreements, and priority IOD management to keep your workforce operational.">
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <title>Corporate Solutions | KOHC</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <nav>
         <div class="logo">KOHC<span>.</span></div>
         <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="about.html">ABOUT US</a></li>
-            <li><a href="services.html">SERVICES</a></li>
-            <li><a href="compliance.html">COMPLIANCE</a></li>
-            <li><a href="corporate.html">CORPORATE</a></li>
-            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="compliance.html">Compliance</a></li>
+            <li><a href="corporate.html" class="active">Corporate</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
-    <header style="background: var(--steel-blue); color: white; padding: 60px 10%; text-align: center;">
-        <h1>Corporate Solutions</h1>
-        <p style="font-size: 1.5rem; font-style: italic;">"We understand production pressures. We deliver efficient, compliant medical solutions."</p>
+   <header class="hero" style="padding: 160px 10% 100px 10%; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; min-height: 400px; background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=2070') no-repeat center center; background-size: cover; background-attachment: fixed;">
+        <h1 style="color: white; font-size: 2.8rem; margin-bottom: 15px;">Corporate Solutions</h1>
+        <p style="color: #cbd5e1; font-size: 1.2rem; max-width: 800px; font-style: italic;">"We understand production pressures. We deliver efficient, compliant medical solutions."</p>
     </header>
 
     <section class="section-padding">
-        <h2 style="text-align: center; margin-bottom: 40px;">Tailored for Mine Managers, HR, and Safety Officers</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Annual Service Agreements</h3>
-                <p>Lock in predictable costs and guaranteed priority bookings for your workforce's annual medicals and COF renewals.</p>
+        <h2 style="text-align: center; margin-bottom: 40px; max-width: 850px; margin-left: auto; margin-right: auto; line-height: 1.4; color: var(--charcoal);">
+            Protect your workforce, reduce downtime, and keep operations moving with occupational health solutions tailored to your business.
+        </h2>
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+            <div class="card" style="padding: 25px;">
+                <h3 style="color: var(--steel-blue); margin-bottom: 10px;">1. Annual Service Agreements</h3>
+                <p>Lock in predictable costs, priority bookings, and proactive medical surveillance solutions tailored to your workforce and operational needs.</p>
             </div>
-            <div class="card">
-                <h3>On-Site & Mobile Options</h3>
-                <p>Depending on site requirements, we can structure solutions that minimize workforce travel time and keep production moving.</p>
+            <div class="card" style="padding: 25px;">
+                <h3 style="color: var(--steel-blue); margin-bottom: 10px;">2. Injuries on Duty & Primary Healthcare Solutions</h3>
+                <p>Efficient management of workplace injuries, Injury on Duty (IOD) cases, and accessible primary healthcare services to reduce absenteeism and support workforce wellbeing.</p>
             </div>
-            <div class="card">
-                <h3>Priority Turnaround Times</h3>
-                <p>We know that a delayed medical means a worker cannot go underground. Our systems are optimized for rapid report generation.</p>
+            <div class="card" style="padding: 25px;">
+                <h3 style="color: var(--steel-blue); margin-bottom: 10px;">3. Priority Turnaround Times</h3>
+                <p>Fast, reliable reporting and medical turnaround times to minimise delays, maintain compliance, and keep your workforce operational.</p>
             </div>
         </div>
     </section>
+
+    <footer>
+        <div class="footer-grid" style="padding: 40px 10%; display: flex; flex-direction: column; align-items: center; background: var(--charcoal); color: white;">
+            <h3>Kimberley Occupational Health Centre</h3>
+            <p>Your partner in Industrial & Mining Medical Compliance.</p>
+            <p style="margin-top: 15px; font-size: 0.95rem; line-height: 1.6; text-align: center; color: #ccc;">
+                <i class="fas fa-map-marker-alt"></i> 1 Molyneaux Road, Greenside, Kimberley<br>
+                <i class="fas fa-phone"></i> Cell: 083 342 0344 | <i class="fas fa-envelope"></i> Email: reception1@kimohc.co.za<br>
+                <i class="fas fa-clock"></i> Office Hours: Monday-Friday 07:30 – 12:00
+            </p>
+        </div>
+        <div class="footer-bottom" style="text-align: center; padding: 20px; background: #222; color: white;">
+            <span>&copy; 2026 KOHC</span> | 
+            <a href="popia.html" style="color: white; text-decoration: none;">POPIA Privacy Policy</a> | 
+            <a href="paia.html" style="color: white; text-decoration: none;">PAIA Manual</a> | 
+            <a href="terms.html" style="color: white; text-decoration: none;">Terms & Conditions</a>
+        </div>
+    </footer>
 </body>
 </html>
