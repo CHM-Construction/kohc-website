@@ -3,50 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | KOHC</title>
+    <meta name="description" content="Contact Kimberley Occupational Health Centre to book an appointment or request a corporate proposal. Located at 1 Molyneaux Road, Greenside, Kimberley.">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <title>Centre Details | KOHC</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <nav>
+   <nav>
         <div class="logo">KOHC<span>.</span></div>
         <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="about.html">ABOUT US</a></li>
-            <li><a href="services.html">SERVICES</a></li>
-            <li><a href="compliance.html">COMPLIANCE</a></li>
-            <li><a href="corporate.html">CORPORATE</a></li>
-            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="compliance.html">Compliance</a></li>
+            <li><a href="corporate.html">Corporate</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
     </nav>
 
-    <header style="background: var(--charcoal); color: white; padding: 60px 10%; text-align: center;">
-        <h1>Contact Us</h1>
-        <p>Book an appointment or request a corporate proposal today.</p>
+ <header class="hero" style="padding: 160px 10% 100px 10%; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; min-height: 400px; background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=2070') no-repeat center center; background-size: cover; background-attachment: fixed;">
+        <h1 style="color: white; font-size: 2.8rem; margin-bottom: 15px;">Contact Us</h1>
+        <p style="color: #cbd5e1; font-size: 1.2rem; max-width: 800px;">Book an appointment or request a corporate protocol today.</p>
     </header>
 
     <section class="section-padding" style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center;">
         
         <div style="flex: 1; min-width: 300px; background: var(--light-grey); padding: 40px; border-radius: 8px;">
-            <h3 style="color: var(--steel-blue); margin-bottom: 20px;">Clinic Details</h3>
-            <p><strong>📍 Location:</strong> Kimberley, Northern Cape, South Africa</p>
-            <p><strong>📞 Phone:</strong> [Insert Phone Number]</p>
-            <p><strong>✉️ Email:</strong> [Insert Email Address]</p>
-            <p><strong>🕒 Office Hours:</strong> Monday - Friday: 08:00 - 17:00</p>
-            <hr style="margin: 20px 0; border: 1px solid #ddd;">
-            <p style="color: #e74c3c;"><strong>🚨 Emergency Contact:</strong> [Insert Emergency Number]</p>
+            <h3 style="color: var(--steel-blue); margin-bottom: 20px;">Centre Details</h3>
+            <p style="margin-bottom: 12px; font-size: 1.1rem;"><strong style="color: var(--charcoal);">📍 Location:</strong> 1 Molyneaux Road, Greenside, Kimberley</p>
+            <p style="margin-bottom: 12px; font-size: 1.1rem;"><strong style="color: var(--charcoal);">📞 Phone / Cell:</strong> <a href="tel:+27833420344" style="color: var(--steel-blue); text-decoration: none;">083 342 0344</a></p>
+            <p style="margin-bottom: 12px; font-size: 1.1rem;"><strong style="color: var(--charcoal);">✉️ Email:</strong> <a href="mailto:reception1@kimohc.co.za" style="color: var(--steel-blue); text-decoration: none;">reception1@kimohc.co.za</a></p>
+            <p style="margin-bottom: 12px; font-size: 1.1rem;"><strong style="color: var(--charcoal);">🕒 Office Hours:</strong> Monday - Friday: 07:30 – 12:00</p>
         </div>
 
         <div style="flex: 1; min-width: 300px; padding: 40px; border: 1px solid #ddd; border-radius: 8px;">
             <h3 style="margin-bottom: 20px;">Request a Booking / Proposal</h3>
-            <form>
-                <input type="text" placeholder="Company Name" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc;">
-                <input type="text" placeholder="Contact Person" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc;">
-                <input type="email" placeholder="Email Address" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc;">
-                <textarea placeholder="How can we help? (e.g., Need 50 annual COFs)" rows="4" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc;"></textarea>
-                <button type="button" class="btn btn-primary" style="width: 100%; border: none; cursor: pointer;">Submit Request</button>
-            </form>
+            <form action="contact.php" method="POST">
+    <input type="text" name="company" placeholder="Company Name" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc;" required>
+    
+    <input type="text" name="contact_person" placeholder="Contact Person" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc;" required>
+    
+    <input type="email" name="email" placeholder="Email Address" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc;" required>
+    
+    <textarea name="message" placeholder="How can we help? (e.g., Need 50 annual COFs)" rows="4" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc;" required></textarea>
+    
+    <button type="submit" class="btn btn-primary" style="width: 100%; border: none; cursor: pointer;">Submit Request</button>
+</form>
         </div>
 
     </section>
+
+    <footer>
+        <div class="footer-grid" style="padding: 40px 10%; display: flex; flex-direction: column; align-items: center; background: var(--charcoal); color: white;">
+            <h3>Kimberley Occupational Health Centre</h3>
+            <p>Your partner in Industrial & Mining Medical Compliance.</p>
+            <p style="margin-top: 15px; font-size: 0.95rem; line-height: 1.6; text-align: center; color: #ccc;">
+                <i class="fas fa-map-marker-alt"></i> 1 Molyneaux Road, Greenside, Kimberley<br>
+                <i class="fas fa-phone"></i> Cell: 083 342 0344 | <i class="fas fa-envelope"></i> Email: reception1@kimohc.co.za<br>
+                <i class="fas fa-clock"></i> Office Hours: Monday-Friday 07:30 – 12:00
+            </p>
+        </div>
+        <div class="footer-bottom" style="text-align: center; padding: 20px; background: #222; color: white;">
+            <span>&copy; 2026 KOHC</span> | 
+            <a href="popia.html" style="color: white; text-decoration: none;">POPIA Privacy Policy</a> | 
+            <a href="paia.html" style="color: white; text-decoration: none;">PAIA Manual</a> | 
+            <a href="terms.html" style="color: white; text-decoration: none;">Terms & Conditions</a>
+        </div>
+    </footer>
+    <!-- Script to handle Form Submission Feedback -->
+    <script>
+        // Parse the URL to look for the "status" parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const status = urlParams.get('status');
+        
+        if (status === 'success') {
+            // Locate the form card container and swap out the HTML for a beautiful confirmation screen
+            const formCard = document.querySelector('form').parentNode;
+            formCard.innerHTML = `
+                <div style="text-align: center; padding: 40px 20px;">
+                    <i class="fas fa-check-circle fa-4x" style="color: #2ecc71; margin-bottom: 20px;"></i>
+                    <h3 style="color: var(--charcoal); margin-bottom: 10px;">Thank You!</h3>
+                    <p style="color: #475569; line-height: 1.7; font-size: 1rem;">Your message has been successfully received. The clinical team at KOHC will review your inquiry and get back to you shortly.</p>
+                    <a href="index.html" class="btn btn-primary" style="display: inline-block; margin-top: 25px; text-decoration: none;">Return Home</a>
+                </div>
+            `;
+        } else if (status === 'error') {
+            // Inject a clean error message right above the form fields
+            const form = document.querySelector('form');
+            const errorBanner = document.createElement('div');
+            errorBanner.style.cssText = "background: #fef2f2; color: #dc2626; padding: 15px; border-radius: 8px; margin-bottom: 20px; text-align: center; font-weight: 600; border: 1px solid #fca5a5; font-size: 0.95rem;";
+            errorBanner.innerHTML = `<i class="fas fa-exclamation-circle" style="margin-right: 8px;"></i> Something went wrong. Please check your details and try again.`;
+            form.parentNode.insertBefore(errorBanner, form);
+        }
+    </script>
 </body>
 </html>
